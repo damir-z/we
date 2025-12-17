@@ -1,0 +1,21 @@
+body{
+    display: grid;
+    justify-content: center;
+    background-color: coral;
+}
+
+
+.bmiDiv{
+    text-align: center;
+    position: relative;
+    top: 100px;
+    background-color:darkviolet;
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+button{
+    margin-top: 50px;
+}

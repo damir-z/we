@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "/style.css">
+</head>
+<body>
+    <div class = "bmiDiv">
+        <h2>BMI Calculation</h2>
+        <form method = "post" action = "/">
+            <label>Height</label>
+            <input id = "height" type = "number" name = "height"><br><br>
+            <label>Weight</label>
+            <input id = "weight" type = "number" name = "weight"><br>
+            <button type = "submit">Calculate</button>
+        </form>
+
+        <% if(bmi !== null) { %>
+            <h3>Your BMI: <i><%= bmi %></i></h3>
+            <h4>Category: <%= category %></h4>
+            <% if(category == "Normal") { %>
+                <style> 
+                    h3 {
+                        color: green;
+                    }
+                    h4 {
+                        color: green;
+                    }
+
+                </style>
+            <% } %>
+            <% if(category == "Overweight") { %>
+                <style> 
+                    h3 {
+                        color: yellow;
+                    }
+                    h4 {
+                        color: yellow;
+                    }
+                </style>
+            <% } %>
+            <% if(category == "Obese") { %>
+                <style> 
+                    h3 {
+                        color: red;
+                    }
+                    h4 {
+                        color: red;
+                    }
+                </style>
+            <% } %>
+        <% } %>
+    </div>
+</body>
+</html>
