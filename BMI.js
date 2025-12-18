@@ -34,8 +34,8 @@ app.get('/', (req, res) =>{
 app.post('/', (req, res) => {
     console.log('Ready');
 
-    const height = req.body.height;
-    const weight = (req.body.weight) / 100;
+    const height = (req.body.height) / 100;
+    const weight = req.body.weight;
 
     if(height < 0 || weight < 0){
         res.render('error');

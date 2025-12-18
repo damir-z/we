@@ -18,4 +18,10 @@ body{
 
 button{
     margin-top: 50px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+
+button:hover{
+    color: orange;
 }
