@@ -17,8 +17,8 @@
 
 
 
-
 const express = require('express');
+
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -37,8 +37,11 @@ app.post('/', (req, res) => {
     const height = req.body.height;
     const weight = (req.body.weight) / 100;
 
-    const bmi = weight / (height * height);
+    if(height < 0 || weight < 0){
+        res.render('error');
+    }
 
+    const bmi = (weight / (height * height)).toFixed(2);
     let category = "";
 
     if(bmi < 18.5){
@@ -52,6 +55,7 @@ app.post('/', (req, res) => {
     }
     res.render('index', {bmi, category});
 })
+
 
 app.listen(PORT, () => {
     console.log(`Server runs on http://localhost:${PORT}`);
