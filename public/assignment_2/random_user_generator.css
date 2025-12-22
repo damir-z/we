@@ -1,0 +1,23 @@
+.card {
+    width: 250px;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.card-title {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.card-temp {
+    margin: 4px 0;
+    font-weight: bold;
+}
+
+.card-desc {
+    color: #555;
+}
+

@@ -31,6 +31,8 @@ app.get('/', (req, res) =>{
     res.render('index', {bmi : null})
 })
 
+
+
 app.post('/', (req, res) => {
     console.log('Ready');
 
@@ -61,4 +63,35 @@ app.listen(PORT, () => {
     console.log(`Server runs on http://localhost:${PORT}`);
 })
 
+
+// const express = require('express');
+
+// const app = express();
+// const path = require('path');
+
+// const PORT = 3000;
+
+// app.use(express.urlencoded({extended: true}));
+
+// app.use(express.static(path.join(__dirname, '..', 'public')));
+
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, '..', 'public', 'interface.html'));
+// })
+
+// app.post('/bmi', (req, res) => {
+//     const height = parseFloat(req.body.height);
+//     const weight = parseFloat(req.body.weight);
+
+//     if (!height || !weight) {
+//         return res.send("Invalid input");
+//     }
+
+//     const bmi = weight / (height * height);
+//     res.send(`Your BMI is ${bmi.toFixed(2)}`);
+// })
+
+// app.listen(PORT, () => {
+//     console.log(`Server runs on http://localhost:${PORT}`);
+// })
 
