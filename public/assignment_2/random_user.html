@@ -7,21 +7,36 @@
     <link rel = 'stylesheet' href = "random_user_generator.css">
 </head>
 <body>
-    <div class="card">
-        <button id = "generate" type = "submit">Generate</button>
-        <p id = "error"></p>
+    <button id = "generate" type = "button">Generate</button>
+    <div class="card userInfo">
+        <p id = "errorr"></p>
         <h3 id = "firstName" name = "firstName" class="card-title"></h3>
         <h3 id = "lastName" name = "lastName" class="card-title"></h3>
         <p id = "gender" name = "gender" class="card-temp"></p>
         <img id="profilePicture" class="card-temp">
         <p id = "age" name = "age" class="card-temp"></p>
         <p id = "dateOfBirth" name = "dateOfBirth" class="card-temp"></p>
+        <p id = "userLocation" name = "userLocation" class="card-temp"></p>
+    </div>
+    <br>
+    <div class = "card">
         <p id = "city" name = "city" class="card-temp"></p>
         <p id = "country" name = "country" class="card-temp"></p>
-        <p id = "location" name = "location" class="card-temp"></p>
+        <p id = 'capitalCity' name = "capitalCity" class="card-temp"></p>
+        <p id = 'officialLanguage' name = "officialLanguage" class="card-temp"></p>
+        <p id = 'currency' name = "currency" class="card-temp"></p>
+        <p id = "exchangeCurrencies"></p>
+        <img id = 'flag' class = "flag" name = "flag" class="card-temp">
     </div>
 
-    <script src = "random_user_generator_frontend.js"></script>
+    <div class="news-card"> 
+        <h3 id="newsTitle"></h3>
+        <p id="newsDescription"></p>
+        <a id = "newsURL"></a>
+        <img id="newsImage">
+    </div>
+
+    <script src = "/random_user_generator_frontend.js"></script>
 
 </body>
 </html>
